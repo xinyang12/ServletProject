@@ -30,9 +30,9 @@ public class UserDao {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            dbUtil.closeConnection(conn);
         }
-
-        dbUtil.closeConnection(conn);
     }
 
     public boolean ifUserExists(String username, String password) {
@@ -54,6 +54,8 @@ public class UserDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            dbUtil.closeConnection(conn);
         }
 
         return false;

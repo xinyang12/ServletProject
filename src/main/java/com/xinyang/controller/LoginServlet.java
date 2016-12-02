@@ -22,8 +22,9 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         if (userDao.ifUserExists(username, password)) {
-            RequestDispatcher view = request.getRequestDispatcher("view/mainPage.jsp");
-            view.forward(request, response);
+//            RequestDispatcher view = request.getRequestDispatcher("view/mainPage.jsp");
+//            view.forward(request, response);
+            response.sendRedirect("getAllArticle");
         } else {
             response.sendRedirect("view/errorPage.jsp");
         }
