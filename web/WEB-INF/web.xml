@@ -48,4 +48,32 @@
         <servlet-name>getAllArticle</servlet-name>
         <url-pattern>/getAllArticle</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>firstSession</servlet-name>
+        <servlet-class>com.xinyang.controller.FirstSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>firstSession</servlet-name>
+        <url-pattern>/firstSession</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>secondSession</servlet-name>
+        <servlet-class>com.xinyang.controller.SecondSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>secondSession</servlet-name>
+        <url-pattern>/secondSession</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>checkCookie</servlet-name>
+        <servlet-class>com.xinyang.controller.CheckCookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>checkCookie</servlet-name>
+        <url-pattern>/checkCookie</url-pattern>
+    </servlet-mapping>
+
 </web-app>

@@ -12,5 +12,8 @@
 </head>
 <body>
 添加文章成功
+<br />
+
+<button onclick="window.location.href='/ServletProject/getAllArticle'">返回</button>
 </body>
 </html>
