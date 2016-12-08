@@ -76,4 +76,26 @@
         <url-pattern>/checkCookie</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>deleteArticle</servlet-name>
+        <servlet-class>com.xinyang.controller.DeleteArticleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteArticle</servlet-name>
+        <url-pattern>/deleteArticle</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>CountFilter</filter-name>
+        <filter-class>com.xinyang.controller.CountFilter</filter-class>
+        <init-param>
+            <param-name>count</param-name>
+            <param-value>5000</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CountFilter</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
 </web-app>

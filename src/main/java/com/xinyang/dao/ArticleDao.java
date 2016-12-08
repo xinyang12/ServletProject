@@ -12,9 +12,16 @@ import java.util.List;
 
 /**
  * Created by car on 2016/12/1.
+ * 文章增删改查操作
  */
 public class ArticleDao {
 
+
+    /**
+     * 添加文章
+     *
+     * by xinyang
+     */
     public void addArticle(String title, String content) {
         DbUtil dbUtil = new DbUtil();
         Connection conn = dbUtil.getConnection();
@@ -36,6 +43,37 @@ public class ArticleDao {
         }
     }
 
+    /**
+     * 删除文章
+     *
+     * by xinyang
+     */
+    public void deleteArticle(Integer id) {
+        DbUtil dbUtil = new DbUtil();
+        Connection conn = dbUtil.getConnection();
+
+        try {
+
+            String sql = "DELETE FROM ARTICLE WHERE ID=?";
+            PreparedStatement ps = null;
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            dbUtil.closeConnection(conn);
+        }
+
+    }
+
+
+    /**
+     * 提取所有文章
+     *
+     * by xinyang
+     */
     public List<Article> getAllArticle() {
         DbUtil dbUtil = new DbUtil();
         Connection conn = dbUtil.getConnection();
