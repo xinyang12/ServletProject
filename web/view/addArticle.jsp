@@ -13,23 +13,22 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 </head>
 <body>
-<form action="/ServletProject/addArticle" method="post">
+
+<form action="${article.id == null ? 'addArticle' : 'modifyArt'}" method="post">
+    <input type="hidden" name="id" value="${article.id}" />
     <label for="title">文章标题</label>
-    <input type="text" id="title" name="title" placeholder="标题" style="width:700px; "/>
+    <input type="text" id="title" name="title" placeholder="标题" style="width:700px;" value="${article.title}"/>
     <br />
     <br />
     <label for="content">文章内容</label>
-    <textarea rows="10" cols="100" id="content" name="content" placeholder="文章内容"></textarea>
+    <textarea rows="10" cols="100" id="content" name="content" placeholder="文章内容">${article.content}</textarea>
     <button type="submit" onclick="checkArt()">发布文章</button>
 </form>
 
 <script>
     function checkArt() {
         var title = document.getElementById("title").value;
-//        var content = document.getElementById("content").value;
-
         title = title.replace(/\s+/g,"");
-//        content = content.replace(/\s+/g,"");
 
         if (document.getElementById("title").value == '') {
             alert("标题不能为空");

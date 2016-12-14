@@ -85,6 +85,33 @@
         <url-pattern>/deleteArticle</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>searchArt</servlet-name>
+        <servlet-class>com.xinyang.controller.SearchArtServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>searchArt</servlet-name>
+        <url-pattern>/searchArt</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>modifyArt</servlet-name>
+        <servlet-class>com.xinyang.controller.ModifyArtServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>modifyArt</servlet-name>
+        <url-pattern>/modifyArt</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>article</servlet-name>
+        <servlet-class>com.xinyang.controller.ArticleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>article</servlet-name>
+        <url-pattern>/article</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>CountFilter</filter-name>
         <filter-class>com.xinyang.controller.CountFilter</filter-class>
