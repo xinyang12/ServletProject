@@ -12,6 +12,10 @@ public class Comment {
     public Comment() {
     }
 
+    public Comment(String title, String content, int articleId) {
+        this(0, title, content, articleId);
+    }
+
     public Comment(int id, String title, String content, int articleId) {
         this.id = id;
         this.title = title;

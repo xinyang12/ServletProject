@@ -112,6 +112,15 @@
         <url-pattern>/article</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>addComment</servlet-name>
+        <servlet-class>com.xinyang.controller.AddCommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addComment</servlet-name>
+        <url-pattern>/addComment</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>CountFilter</filter-name>
         <filter-class>com.xinyang.controller.CountFilter</filter-class>

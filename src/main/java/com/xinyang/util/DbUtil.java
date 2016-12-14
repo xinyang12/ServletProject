@@ -9,6 +9,11 @@ import java.sql.SQLException;
  */
 public class DbUtil {
 
+    /**
+     * 打开连接
+     *
+     * by xinyang
+     */
     public Connection getConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -25,6 +30,11 @@ public class DbUtil {
         throw new RuntimeException("数据库连接失败");
     }
 
+    /**
+     * 关闭连接
+     *
+     * by xinyang
+     */
     public void closeConnection(Connection conn) {
         try {
             if (conn != null) {

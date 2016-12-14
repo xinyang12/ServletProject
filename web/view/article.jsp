@@ -23,15 +23,28 @@
 <hr />
 <br />
 <div>
-    <form>
+    <form action="addComment" method="post">
+        <input type="hidden" name="articleId" value="${article.id}" />
         <label for="commentTitle">标题</label>
         <input id="commentTitle" name="commentTitle" placeholder="评论标题" style="width:700px;"/>
         <br />
         <br />
         <label for="commentContent">内容</label>
-        <textarea rows="10" cols="100" id="commentContent" name="content" placeholder="评论内容"></textarea>
-        <button type="submit" onclick="">提交评论</button>
+        <textarea rows="10" cols="100" id="commentContent" name="commentContent" placeholder="评论内容"></textarea>
+        <button type="submit" onclick="checkArt()">提交评论</button>
     </form>
 </div>
 </body>
+
+<script>
+    function checkArt() {
+        var title = document.getElementById("commentTitle").value;
+        title = title.replace(/\s+/g,"");
+
+        if (document.getElementById("commentTitle").value == '') {
+            alert("评论标题不能为空");
+            return false;
+        }
+    }
+</script>
 </html>

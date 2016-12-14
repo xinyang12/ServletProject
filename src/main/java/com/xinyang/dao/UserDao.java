@@ -14,6 +14,11 @@ import java.sql.SQLException;
  */
 public class UserDao {
 
+    /**
+     * 注册用户
+     *
+     * by xinyang
+     */
     public void register(String username, String password) {
         DbUtil dbUtil = new DbUtil();
         Connection conn = dbUtil.getConnection();
@@ -35,6 +40,11 @@ public class UserDao {
         }
     }
 
+    /**
+     * 判断用户名是否存在
+     *
+     * by xinyang
+     */
     public boolean ifUserExists(String username, String password) {
         DbUtil dbUtil = new DbUtil();
         Connection conn = dbUtil.getConnection();
